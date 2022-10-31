@@ -1,0 +1,19 @@
+{% include 'core/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="home__page">
+            <div class="background">
+                <div class="sign-in__card shadow">
+                    <p class="card__title">Authorization</p>
+                    <form action="{% url 'login' %}" method="post" class="auth__form">
+                        {% csrf_token %}
+                        <input type="text" id="username" name="username" class="rounded" placeholder="Login">
+                        <input type="password" id="password" name="password" class="rounded" placeholder="Password">
+                        <button class="card__button">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

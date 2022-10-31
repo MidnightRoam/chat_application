@@ -1,0 +1,28 @@
+{% include 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="messenger__page">
+        <div class="messenger__card rounded">
+            <div class="chat__info">
+                <p class="chat__title">{{ room.name }}</p>
+                <p class="chat__members">Участники: 2</p>
+                <p class="chat__date">{{ room.created_at }}</p>
+            </div>
+            <div class="chat__messenges">
+                <div class="right__message rounded">
+                    <div class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, assumenda?</div>
+                </div>
+                <div class="left__message rounded">
+                    <div class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, quas!</div>
+                </div>
+            </div>
+            <form action="." method="post" class="form-control">
+                <input type="text" name="content" id="chat-message-input" class="chat__input" placeholder="Message...">
+                <button class="send__btn">
+                    <img src="{% static 'images/send-message.svg' %}" alt="1">
+                </button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
