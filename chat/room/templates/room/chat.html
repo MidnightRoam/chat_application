@@ -9,17 +9,17 @@
                 <p class="chat__members">Участники: 2</p>
                 <p class="chat__date">{{ room.created_at }}</p>
             </div>
-            <div class="chat__messenges">
-                <div class="right__message rounded">
-                    <div class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, assumenda?</div>
-                </div>
-                <div class="left__message rounded">
-                    <div class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, quas!</div>
-                </div>
+            <div class="chat__messages" id="chat-messages">
+                {% for message in messages %}
+                    <div class="left__message rounded">
+                        <p class="message__username">{{ message.user.username }}</p>
+                        <p class="message__text"> {{ message.content }}</p>
+                    </div>
+                {% endfor %}
             </div>
             <form action="." method="post" class="form-control">
                 <input type="text" name="content" id="chat-message-input" class="chat__input" placeholder="Message...">
-                <button class="send__btn">
+                <button class="send__btn" id="chat-message-submit">
                     <img src="{% static 'images/send-message.svg' %}" alt="1">
                 </button>
             </form>
@@ -29,5 +29,6 @@
 
 {% block scripts %}
     {{ room.slug|json_script:"json-roomname" }}
+    {{ request.user.username|json_script:"json-username" }}
     <script src="{% static 'js/script.js' %}"></script>
 {% endblock %}

@@ -5,5 +5,5 @@ from .views import RoomsListView, RoomView
 
 urlpatterns = [
         path('chats/', RoomsListView.as_view(), name='chats'),
-        path('<slug:slug>/', RoomView.as_view(), name='chat')
+        path('<slug:slug>/', RoomView, name='chat')
 ]
