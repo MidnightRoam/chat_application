@@ -276,6 +276,7 @@ input:focus {
     width: 60%;
     height: auto;
     background: #7879F1;
+    color: #fff;
     text-align: right;
 }
 

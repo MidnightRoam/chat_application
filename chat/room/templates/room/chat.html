@@ -26,3 +26,8 @@
         </div>
     </div>
 {% endblock %}
+
+{% block scripts %}
+    {{ room.slug|json_script:"json-roomname" }}
+    <script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
