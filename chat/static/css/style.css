@@ -287,13 +287,30 @@ input:focus {
 }
 
 .left__message {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
     text-align: left;
     padding: 10px;
     margin: 2% 35% 2% 0%;
-    width: 40%;
-    height: auto;
+    max-width: 70%;
+    max-height: 500%;
     background: #F4F4F4;
     text-align: left;
+    overflow: visible;
+}
+
+.message__username {
+    font-weight: 600;
+    margin: 0;
+}
+
+.message__text {
+    margin: 0;
+}
+
+.message__date {
+    color: darkgrey;
 }
 
 .send__btn {
@@ -310,3 +327,18 @@ input:focus {
     justify-content: space-between;
     flex-direction: row;
 }
+
+/* Messages scrollbar styles for webkit browsers */
+.chat__messages::-webkit-scrollbar {
+    width: 0.4em;
+}
+
+.chat__messages::-webkit-scrollbar-track {
+    background-color: inherit;
+}
+
+.chat__messages::-webkit-scrollbar-thumb {
+    background-color: #F4F4F4;
+    border-radius: 1em;
+}
+

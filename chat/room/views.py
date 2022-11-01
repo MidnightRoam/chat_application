@@ -2,6 +2,8 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.utils.decorators import method_decorator
 from django.views.generic import ListView, DetailView
+from django.contrib.auth.models import User
+
 
 from .models import Room, Message
 
@@ -34,5 +36,7 @@ class RoomsListView(ListView):
 def RoomView(request, slug):
     room = Room.objects.get(slug=slug)
     messages = Message.objects.filter(room=room)
+    users = User.objects.all()
+    users = users.count()
 
-    return render(request, 'room/chat.html', {'room': room, 'messages': messages})
+    return render(request, 'room/chat.html', {'room': room, 'messages': messages, 'users': users})

@@ -6,16 +6,26 @@
         <div class="messenger__card rounded">
             <div class="chat__info">
                 <p class="chat__title">{{ room.name }}</p>
-                <p class="chat__members">Участники: 2</p>
+                <p class="chat__members">Участники: {{users}}</p>
                 <p class="chat__date">{{ room.created_at }}</p>
             </div>
             <div class="chat__messages" id="chat-messages">
                 {% for message in messages %}
                     <div class="left__message rounded">
-                        <p class="message__username">{{ message.user.username }}</p>
-                        <p class="message__text"> {{ message.content }}</p>
+                        <div>
+                            <p class="message__username">{{ message.user.username }}</p>
+                            <p class="message__text"> {{ message.content }}</p>
+                        </div>
+                        <p class="message__date"> {{ message.created_at|date:"H:i" }}</p>
                     </div>
                 {% endfor %}
+                    <div class="right__message rounded">
+                        <div>
+                            <p class="message__username">1</p>
+                            <p class="message__text"> 2312</p>
+                        </div>
+                        <p class="message__date"> 222</p>
+                    </div>
             </div>
             <form action="." method="post" class="form-control">
                 <input type="text" name="content" id="chat-message-input" class="chat__input" placeholder="Message...">
