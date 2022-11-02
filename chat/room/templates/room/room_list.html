@@ -11,7 +11,24 @@
                         <a href="{% url 'chat' room.name %}" class="link room__link rounded">{{ room }}</a>
                     </div>
                 {% endfor %}
-                <form class="chat__form" method="post" action="{% url 'checkview' %}">
+                <div class="pagination-section">
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}" class="pagination-link"><</a>
+                    {% endif %}
+                    {% for page in page_obj.paginator.page_range %}
+
+                    {% if page_obj.number == page %}
+                        <a href="?page={{ page }}" class="pagination-link page-num-selected">{{ page }}</a>
+                    {% else %}
+                        <a href="?page={{ page }}" class="pagination-link">{{ page }}</a>
+                    {% endif %}
+
+                    {% endfor %}
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}" class="pagination-link">></a>
+                    {% endif %}
+                </div>
+                <form class="chat__form" method="post" action="{% url 'create_room' %}">
                     {% csrf_token %}
                    <input type="text" name="room_name" id="room_name" class="input rounded" placeholder="Enter the chat name">
                    <button type="submit" class="chat__btn">Create</button>

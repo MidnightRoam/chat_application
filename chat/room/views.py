@@ -4,7 +4,6 @@ from django.utils.decorators import method_decorator
 from django.views.generic import ListView, DetailView
 from django.contrib.auth.models import User
 
-
 from .models import Room, Message
 
 
@@ -13,6 +12,7 @@ class RoomsListView(ListView):
     """Render list of created rooms"""
     template_name = 'room_list.html'
     context_object_name = 'rooms'
+    paginate_by = 5
 
     def get_queryset(self):
         return Room.objects.all()
@@ -41,12 +41,15 @@ def RoomView(request, room_name):
     return render(request, 'room/chat.html', {'room': room, 'messages': messages, 'users': users})
 
 
-def checkview(request):
-    room = request.POST.get('room_name')
+def create_room(request):
+    # Если ввести название комнаты и в конце будет стоять знак ! - этот знак обрежется
+    # Если в названии комнаты есть пробел - он будет изменен на _
+    room = request.POST.get('room_name').rstrip('!').replace(' ', '_')
 
     if Room.objects.filter(name=room).exists():
         return redirect('/' + room)
     else:
-        new_room = Room.objects.create(name=room)
+        slug = room.replace(' ', '-').lower()
+        new_room = Room.objects.create(name=room, slug=slug)
         new_room.save()
         return redirect('/' + room + '/')

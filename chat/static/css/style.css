@@ -567,6 +567,23 @@ button:hover {
     justify-content: start;
 }
 
+.pagination-section {
+    margin: 10px;
+}
+
+.pagination-link {
+    background-color: #7879F1;
+    color: #fff;
+    padding: 4px 10px 4px 10px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.page-num-selected {
+    background-color: #44f5b1;
+    color: #5D5FEF;
+}
+
 .room__link {
     padding: 15px;
     background: #7879F1;
