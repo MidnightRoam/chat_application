@@ -1,6 +1,6 @@
 {% include 'core/base.html' %}
 {% load static %}
-
+{% block header %} {% endblock %}
 {% block content %}
     <div class="messenger__page">
         <div class="messenger__card rounded">
@@ -19,13 +19,13 @@
                         <p class="message__date"> {{ message.created_at|date:"H:i" }}</p>
                     </div>
                 {% endfor %}
-                    <div class="right__message rounded">
-                        <div>
-                            <p class="message__username">1</p>
-                            <p class="message__text"> 2312</p>
-                        </div>
-                        <p class="message__date"> 222</p>
-                    </div>
+<!--                    <div class="right__message rounded">-->
+<!--                        <div>-->
+<!--                            <p class="message__username">1</p>-->
+<!--                            <p class="message__text"> 2312</p>-->
+<!--                        </div>-->
+<!--                        <p class="message__date"> 222</p>-->
+<!--                    </div>-->
             </div>
             <form action="." method="post" class="form-control">
                 <input type="text" name="content" id="chat-message-input" class="chat__input" placeholder="Message...">
@@ -38,7 +38,7 @@
 {% endblock %}
 
 {% block scripts %}
-    {{ room.slug|json_script:"json-roomname" }}
+    {{ room.name|json_script:"json-roomname" }}
     {{ request.user.username|json_script:"json-username" }}
     <script src="{% static 'js/script.js' %}"></script>
 {% endblock %}

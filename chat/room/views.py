@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.utils.decorators import method_decorator
 from django.views.generic import ListView, DetailView
 from django.contrib.auth.models import User
@@ -33,10 +33,20 @@ class RoomsListView(ListView):
     #     messages = Message.objects.filter(room=room)
 
 @login_required
-def RoomView(request, slug):
-    room = Room.objects.get(slug=slug)
+def RoomView(request, room_name):
+    room = Room.objects.get(name=room_name)
     messages = Message.objects.filter(room=room)
-    users = User.objects.all()
-    users = users.count()
+    users = User.objects.all().count()
 
     return render(request, 'room/chat.html', {'room': room, 'messages': messages, 'users': users})
+
+
+def checkview(request):
+    room = request.POST.get('room_name')
+
+    if Room.objects.filter(name=room).exists():
+        return redirect('/' + room)
+    else:
+        new_room = Room.objects.create(name=room)
+        new_room.save()
+        return redirect('/' + room + '/')

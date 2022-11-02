@@ -8,12 +8,13 @@
                <p class="card__title">Choose / create chat</p>
                 {% for room in rooms %}
                     <div class="chat__rooms">
-                        <a href="{% url 'chat' room.slug %}" class="link room__link rounded">{{ room }}</a>
+                        <a href="{% url 'chat' room.name %}" class="link room__link rounded">{{ room }}</a>
                     </div>
                 {% endfor %}
-                <form class="chat__form">
-                   <input type="text"  class="input rounded" placeholder="Enter the chat name">
-                   <button class="chat__btn">Create</button>
+                <form class="chat__form" method="post" action="{% url 'checkview' %}">
+                    {% csrf_token %}
+                   <input type="text" name="room_name" id="room_name" class="input rounded" placeholder="Enter the chat name">
+                   <button type="submit" class="chat__btn">Create</button>
                 </form>
             </div>
         </div>

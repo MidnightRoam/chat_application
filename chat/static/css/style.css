@@ -427,16 +427,17 @@ button:hover {
     background-color: #F4F4F4;
     justify-content: center;
 }
-/* Nest Hub Max adaptive */
+
+
 @media (max-width: 1280px) {
     .chat__page {
-        height: 800px;
+        height: 1024px;
     }
 }
-/* Nest Hub adaptive */
+
 @media (max-width: 1024px) {
     .chat__page {
-        height: 600px;
+        height: 768px;
     }
 }
 /* Surface Pro 7 adaptive */

@@ -6,7 +6,7 @@ from django.db import models
 
 class Room(models.Model):
     name = models.CharField(max_length=255)
-    slug = models.SlugField(unique=True)
+    # slug = models.SlugField(unique=True)
     created_at = models.DateField(default=timezone.now())
 
     def __str__(self):
