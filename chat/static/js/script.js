@@ -1,6 +1,8 @@
 const roomName = JSON.parse(document.getElementById('json-roomname').textContent);
 const userName = JSON.parse(document.getElementById('json-username').textContent);
 
+// Создание вебсокета
+
 const chatSocket = new WebSocket(
     'ws://'
     + window.location.host
@@ -37,7 +39,7 @@ chatSocket.onclose = function(e) {
     console.log('onclose')
 }
 
-//
+// Отправка сообщения
 
 document.querySelector('#chat-message-submit').onclick = (e) => {
     e.preventDefault();
@@ -56,7 +58,7 @@ document.querySelector('#chat-message-submit').onclick = (e) => {
     return false;
 }
 
-//
+// Скролл всегда будет следовать за последним сообщением
 
 function scrollToBottom() {
     const objDiv =  document.querySelector('#chat-messages')

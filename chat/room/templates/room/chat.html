@@ -1,12 +1,17 @@
-{% include 'core/base.html' %}
+{% extends 'core/base.html' %}
 {% load static %}
-{% block header %} {% endblock %}
+
+{% block custom_header %} {% endblock %}
+
 {% block content %}
     <div class="messenger__page">
-        <div class="messenger__card rounded">
+        <div class="messenger__card">
             <div class="chat__info">
-                <p class="chat__title">{{ room.name }}</p>
-                <p class="chat__members">Участники: {{users}}</p>
+                <div class="chat__header">
+                    <p class="chat__title">{{ room.name }}</p>
+                    <a href="{% url 'chats' %}" class="link chat__door"><img src="{% static 'images/logout.svg' %}" alt="logout"></a>
+                </div>
+                <p class="chat__members">Members: {{users}}</p>
                 <p class="chat__date">{{ room.created_at }}</p>
             </div>
             <div class="chat__messages" id="chat-messages">

@@ -12,18 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 </head>
 <body class="container">
-    <header>
-        <ul class="nav__ul">
-            {% if request.user.is_authenticated %}
-            <li class="nav__li"><a href="{% url 'home' %}" class="link">Home</a></li>
-            <li class="nav__li"><a href="{% url 'chats' %}" class="link">Chat</a></li>
-            <li class="nav__li"><a href="{% url 'logout' %}" class="link"><img src="{% static 'images/logout.svg' %}" alt="logout"></a></li>
-            {% else %}
-            <li class="nav__li"><a href="{% url 'login' %}" class="link">Sign In</a></li>
-            <li class="nav__li"><a href="{% url 'signup' %}" class="link">Sign Up</a></li>
-            {% endif %}
-        </ul>
-    </header>
+    {% block custom_header %}
+        {% include 'include/header.html' %}
+    {% endblock %}
 
     {% block content %} {% endblock %}
 
