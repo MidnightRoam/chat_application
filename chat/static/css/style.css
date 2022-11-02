@@ -670,16 +670,28 @@ input:focus {
         height: 1024px;
     }
 }
+/* iPhone XR adaptive */
+@media (max-width: 414px) {
+    .messenger__page  {
+        height: 896px;
+    }
+}
+/* Pixel 5 adaptive */
+@media (max-width: 393px) {
+    .messenger__page  {
+        height: 851px;
+    }
+}
 /* iPhone 12 Pro adaptive */
 @media (max-width: 390px) {
     .messenger__page  {
-        height: 950px;
+        height: 844px;
     }
 }
 /* iPhone SE adaptive */
 @media (max-width: 375px) {
     .messenger__page  {
-        height: 750px;
+        height: 667px;
     }
 }
 
@@ -696,14 +708,14 @@ input:focus {
 @media (max-width: 820px) {
     .messenger__card  {
         width: 1050px;
-        height: 1100px;
+        height: 1180px;
     }
 }
 /* iPad Mini adaptive */
 @media (max-width: 768px) {
     .messenger__card  {
         width: 768px;
-        height: 935px;
+        height: 1024px;
     }
 }
 /* iPhone XR adaptive */
@@ -711,6 +723,12 @@ input:focus {
     .messenger__card  {
         width: 414px;
         height: 896px;
+    }
+}
+/* Pixel 5 adaptive */
+@media (max-width: 393px) {
+    .messenger__card  {
+        height: 851px;
     }
 }
 /* iPhone 12 Pro adaptive */
@@ -724,7 +742,13 @@ input:focus {
 @media (max-width: 375px) {
     .messenger__card  {
         width: 375px;
-        height: 650px;
+        height: 660px;
+    }
+}
+/* Samsung Galaxy S8+ adaptive */
+@media (max-width: 360px) {
+    .messenger__card  {
+        height: 740px;
     }
 }
 
@@ -796,22 +820,38 @@ input:focus {
     padding: 10px;
     margin: 2% 35% 2% 0%;
     max-width: 70%;
-    max-height: 500%;
     background: #F4F4F4;
-    text-align: left;
     overflow: visible;
+    border-radius: 0px 6px 6px 0px;
+}
+
+.message__container {
+    align-items: justify;
 }
 
 .message__username {
+    font-size: 14px;
+    line-height: 18px;
     font-weight: 600;
     margin: 0;
 }
 
 .message__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
     margin: 0;
+    max-width: 133px;
+    word-wrap: break-word;
 }
 
 .message__date {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    align-self: flex-end;
+    padding-top: 1em;
+    margin-bottom: 0px;
     color: darkgrey;
 }
 

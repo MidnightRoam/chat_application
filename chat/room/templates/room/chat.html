@@ -1,6 +1,8 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
+{% block title %}<title>Chat page</title>{% endblock %}
+
 {% block custom_header %} {% endblock %}
 
 {% block content %}
@@ -9,7 +11,7 @@
             <div class="chat__info">
                 <div class="chat__header">
                     <p class="chat__title">{{ room.name }}</p>
-                    <a href="{% url 'chats' %}" class="link chat__door"><img src="{% static 'images/logout.svg' %}" alt="logout"></a>
+                    <a href="#" class="link chat__door" id="chat-door"><img src="{% static 'images/logout.svg' %}" alt="logout"></a>
                 </div>
                 <p class="chat__members">Members: {{users}}</p>
                 <p class="chat__date">{{ room.created_at }}</p>
@@ -17,9 +19,10 @@
             <div class="chat__messages" id="chat-messages">
                 {% for message in messages %}
                     <div class="left__message rounded">
-                        <div>
+                        <div class="message__container">
                             <p class="message__username">{{ message.user.username }}</p>
-                            <p class="message__text"> {{ message.content }}</p>
+                            <p class="message__text">{{ message.content }}</p>
+                            <br>
                         </div>
                         <p class="message__date"> {{ message.created_at|date:"H:i" }}</p>
                     </div>
@@ -45,5 +48,7 @@
 {% block scripts %}
     {{ room.name|json_script:"json-roomname" }}
     {{ request.user.username|json_script:"json-username" }}
+    <script src="{% static 'js/socket.js' %}"></script>
+    <script src="{% static 'js/messages.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
 {% endblock %}
