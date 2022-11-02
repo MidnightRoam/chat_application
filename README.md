@@ -1,6 +1,13 @@
 Chat application using Django and vanilla Javascript 
 
 Чат на Django + чистый Javascript
+Языки программирования и инструменты:
+<ul> 
+  <li>Django</li>
+  <li>Javacript</li>
+  <li>CSS/HTML</li>
+  <li>Django channels</li>
+</ul>
 
 Что было разработано в веб-приложении: 
 <ul>
