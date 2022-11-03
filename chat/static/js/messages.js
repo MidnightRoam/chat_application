@@ -33,10 +33,14 @@ chatSocket.onmessage = function(e) {
     if (data.message) {
         let html = `
             <div class="left__message rounded">
-                <p class="message__username">${data.username}</p>
-
-                <p class="message__text"><br>${data.message}</p>
-                <p class="message__date">${timeMessage}</p>
+                <div class="message__container">
+                    <p class="message__username">${data.username}</p>
+                    <p class="message__text">${data.message}</p><br>
+                </div>
+                <div class="send__info" id="send-info">
+                    <p class="message__date">${timeMessage}</p>
+                    <img src="https://img.icons8.com/officel/512/checkmark.png" alt="" class="check__send" id="send-img">
+                </div>
             </div>
             `
 

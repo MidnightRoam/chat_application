@@ -18,22 +18,29 @@
             </div>
             <div class="chat__messages" id="chat-messages">
                 {% for message in messages %}
-                    <div class="left__message rounded">
+                    <div class="left__message">
                         <div class="message__container">
                             <p class="message__username">{{ message.user.username }}</p>
                             <p class="message__text">{{ message.content }}</p>
                             <br>
                         </div>
-                        <p class="message__date"> {{ message.created_at|date:"H:i" }}</p>
+                        <div class="send__info" id="send-info">
+                            <p class="message__date"> {{ message.created_at|date:"H:i" }}</p>
+                            <img src="https://img.icons8.com/officel/512/checkmark.png" alt="" class="check__send" id="send-img">
+                        </div>
                     </div>
-                {% endfor %}
 <!--                    <div class="right__message rounded">-->
-<!--                        <div>-->
-<!--                            <p class="message__username">1</p>-->
-<!--                            <p class="message__text"> 2312</p>-->
+<!--                        <div class="message__container">-->
+<!--                            <p class="message__username">{{ message.user.username }}</p>-->
+<!--                            <p class="message__text">{{ message.content }}</p>-->
+<!--                            <br>-->
 <!--                        </div>-->
-<!--                        <p class="message__date"> 222</p>-->
+<!--                        <div class="send__info">-->
+<!--                            <p class="message__date"> {{ message.created_at|date:"H:i" }}</p>-->
+<!--&lt;!&ndash;                            <img src="" alt="" class="check__send" id="send-img">&ndash;&gt;-->
+<!--                        </div>-->
 <!--                    </div>-->
+                {% endfor %}
             </div>
             <form action="." method="post" class="form-control">
                 <input type="text" name="content" id="chat-message-input" class="chat__input" placeholder="Message...">
