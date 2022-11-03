@@ -65,27 +65,30 @@ header {
         font-size: 64px;
     }
 }
-
 /* Surface Duo adaptive */
 @media (max-width: 540px) {
     .title {
         font-size: 40px;
     }
 }
-
+/* Mobile adaptive */
+@media (max-width: 428px) {
+    .title {
+        font-size: 32px;
+    }
+}
+/* iPhone XR adaptive */
 @media (max-width: 414px) {
     .title {
         font-size: 32px;
     }
 }
-
 /* iPhone SE adaptive */
 @media (max-width: 375px) {
     .title {
         font-size: 28px;
     }
 }
-
 /* Samsung Galaxy Fold adaptive */
 @media (max-width: 280px) {
     .title {
@@ -104,77 +107,84 @@ header {
     align-items: center;
     transition: all 1s ease-in-out;
 }
-
+/* Desktop adaptive */
+@media (max-width: 1440px) {
+    .background {
+        height: 1024px;
+    }
+}
 /* Surface Pro 7 adaptive */
 @media (max-width: 912px) {
     .background {
         height: 1368px;
     }
 }
-
+/* Tablet adaptive */
+@media (max-width: 834px) {
+    .background {
+        height: 1194px;
+    }
+}
 /* iPad Air adaptive */
 @media (max-width: 820px) {
     .background {
         height: 1180px;
     }
 }
-
 /* iPad Air adaptive */
 @media (max-width: 768px) {
     .background {
         height: 1024px;
     }
 }
-
 /* Surface Duo adaptive */
 @media (max-width: 540px) {
     .background {
         height: 720px;
     }
 }
-
+/* Mobile adaptive */
+@media (max-width: 428px) {
+    .background {
+        height: 926px;
+    }
+}
 /* iPhone XR adaptive */
 @media (max-width: 414px) {
     .background {
         height: 896px;
     }
 }
-
 /* iPhone SE adaptive */
 @media (max-width: 412px) {
     .background {
         height: 915px;
     }
 }
-
 /* Pixel 5 adaptive */
 @media (max-width: 393px) {
     .background {
         height: 851px;
     }
 }
-
 /* iPhone 12 Pro adaptive */
 @media (max-width: 390px) {
     .background {
         height: 844px;
     }
 }
-
 /* iPhone SE adaptive */
 @media (max-width: 375px) {
     .background {
         height: 667px;
     }
 }
-
 /* Samsung Galaxy S8+ and S20 Ultra adaptive */
 @media (max-width: 360px) {
     .background {
         height: 740px;
     }
 }
-
 /* Samsung Galaxy Fold adaptive */
 @media (max-width: 280px) {
     .background {
@@ -205,6 +215,14 @@ header {
         width: 500px;
     }
 }
+
+/* Mobile adaptive */
+@media (max-width: 428px) {
+    .sign-in__card {
+        width: 380px;
+    }
+}
+
 /* iPhone XR adaptive */
 @media (max-width: 414px) {
     .sign-in__card {
@@ -268,6 +286,14 @@ header {
         width: 450px;
     }
 }
+
+/* Mobile adaptive */
+@media (max-width: 428px) {
+    .auth__form input {
+        width: 345px;
+    }
+}
+
 /* iPhone XR adaptive */
 @media (max-width: 414px) {
     .auth__form input {
@@ -427,7 +453,12 @@ button:hover {
     background-color: #F4F4F4;
     justify-content: center;
 }
-
+/* Desktop adaptive */
+@media (max-width: 1440px) {
+    .chat__page {
+        height: 1024px;
+    }
+}
 
 @media (max-width: 1280px) {
     .chat__page {
@@ -446,6 +477,12 @@ button:hover {
         height: 1368px;
     }
 }
+/* Tablet adaptive */
+@media (max-width: 834px) {
+    .chat__page {
+        height: 1194px;
+    }
+}
 /* iPad Air adaptive */
 @media (max-width: 820px) {
     .chat__page {
@@ -462,6 +499,12 @@ button:hover {
 @media (max-width: 540px) {
     .chat__page {
         height: 720px;
+    }
+}
+/* Movile adaptive */
+@media (max-width: 428px) {
+    .chat__page {
+        height: 926px;
     }
 }
 /* iPhone XR adaptive */
@@ -508,6 +551,12 @@ button:hover {
     background-color: #FFFFFF;
     text-align: center;
 }
+/* Mobile adaptive */
+@media (max-width: 428px) {
+    .chat__card {
+        width: 400px;
+    }
+}
 /* iPhone XR adaptive */
 @media (max-width: 414px) {
     .chat__card {
@@ -540,6 +589,12 @@ button:hover {
     padding: 11px 25px 11px 25px;
     border: none;
     color: #F4F4F4;
+}
+/* Mobile adaptive */
+@media (max-width: 428px) {
+    .chat__btn {
+        left: 73.5%;
+    }
 }
 /* iPhone XR adaptive */
 @media (max-width: 414px) {
@@ -595,6 +650,12 @@ button:hover {
     display: flex;
     justify-content: space-between;
 }
+/* Mobile adaptive */
+@media (max-width: 428px) {
+    .room__link {
+        width: 350px;
+    }
+}
 /* iPhone XR adaptive */
 @media (max-width: 414px) {
     .room__link {
@@ -626,7 +687,12 @@ button:hover {
     text-indent: 1em;
     margin-bottom: 2em;
 }
-
+/* Mobile adaptive */
+@media (max-width: 428px) {
+    .input {
+        width: 370px;
+    }
+}
 /* iPhone XR adaptive */
 @media (max-width: 414px) {
     .input {
@@ -657,6 +723,18 @@ input:focus {
     display: flex;
     background-color: #F4F4F4;
     justify-content: center;
+}
+/* Desktop adaptive */
+@media (max-width: 1440px) {
+    .messenger__page  {
+        height: 1024px;
+    }
+}
+/* Tablet adaptive */
+@media (max-width: 834px) {
+    .messenger__page  {
+        height: 1194px;
+    }
 }
 /* iPad Air adaptive */
 @media (max-width: 820px) {
@@ -704,6 +782,21 @@ input:focus {
     flex-direction: column;
     justify-content: space-between;
 }
+/* Desktop adaptive */
+@media (max-width: 1440px) {
+    .messenger__card  {
+        width: 546px;
+        height: 1024px;
+    }
+}
+/* Tablet adaptive */
+@media (max-width: 834px) {
+    .messenger__card  {
+        width: 696px;
+        height: 1194px;
+    }
+}
+
 /* iPad Air adaptive */
 @media (max-width: 820px) {
     .messenger__card  {
@@ -867,6 +960,7 @@ input:focus {
     line-height: 18px;
     font-weight: 600;
     margin: 0;
+    margin-bottom: 4px;
 }
 
 .message__text {
