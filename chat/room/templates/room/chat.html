@@ -18,7 +18,7 @@
             </div>
             <div class="chat__messages" id="chat-messages">
                 {% for message in messages %}
-                    <div class="left__message">
+                    <div class="left__message" id="message">
                         <div class="message__container">
                             <p class="message__username">{{ message.user.username }}</p>
                             <p class="message__text">{{ message.content }}</p>
@@ -55,6 +55,7 @@
 {% block scripts %}
     {{ room.name|json_script:"json-roomname" }}
     {{ request.user.username|json_script:"json-username" }}
+    {{ request.user.id|json_script:"user_id" }}
     <script src="{% static 'js/socket.js' %}"></script>
     <script src="{% static 'js/messages.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>

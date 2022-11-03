@@ -620,6 +620,7 @@ button:hover {
     align-items: center;
     flex-direction: column;
     justify-content: start;
+    position: relative;
 }
 
 .pagination-section {
@@ -642,6 +643,11 @@ button:hover {
 .room__link {
     padding: 15px;
     background: #7879F1;
+    background-image: url('https://img.icons8.com/ios/512/circled-chevron-right.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-origin: content-box;
     color: ##F4F4F4;
     width: 460px;
     height: 20px;

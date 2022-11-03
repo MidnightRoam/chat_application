@@ -9,10 +9,12 @@ const chatSocket = new WebSocket(
     + '/'
 );
 
+// Подключение сокета
 chatSocket.onopen = (e) => {
     console.log('Client is connected')
 }
 
+// Закрытие сокета
 chatSocket.onclose = function(e) {
     console.log('onclose')
 }

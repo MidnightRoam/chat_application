@@ -11,7 +11,7 @@
                 {% for room in rooms %}
                     <div class="chat__rooms">
                         <a href="{% url 'chat' room.name %}" class="link room__link rounded">{{ room }}</a>
-                    </div>
+                     </div>
                 {% endfor %}
                 <div class="pagination-section">
                     {% if page_obj.has_previous %}
