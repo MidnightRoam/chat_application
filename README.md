@@ -2,7 +2,7 @@ Chat application using Django and vanilla Javascript
 
 Чат на Django + чистый Javascript
 
-##Пользователи для тестирования:
+## Пользователи для тестирования:
 Вы можете зарегестрировать своих собственных пользователей или использовать следующих:
 <ul> 
   <li>Username: Vladislav</li>
@@ -13,7 +13,7 @@ Chat application using Django and vanilla Javascript
   <li>Password: Momoru00</li>
 </ul>
 
-##Языки программирования и инструменты:
+## Языки программирования и инструменты:
 <ul> 
   <li>Django</li>
   <li>Javacript</li>
@@ -21,7 +21,7 @@ Chat application using Django and vanilla Javascript
   <li>Django channels</li>
 </ul>
 
-##Что было разработано в веб-приложении: 
+## Что было разработано в веб-приложении: 
 <ul>
   <li>Авторизация и регестрация пользователей</li>
   <li>Создание чатов пользователями</li>
