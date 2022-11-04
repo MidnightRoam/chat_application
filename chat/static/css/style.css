@@ -684,6 +684,11 @@ button:hover {
 .room__link:hover {
     background: #44f5b1;
     color: #5D5FEF;
+    background-image: url('https://img.icons8.com/ios/512/circled-chevron-right.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-origin: content-box;
 }
 
 .input {
