@@ -10,12 +10,12 @@
 Вы можете зарегестрировать своих собственных пользователей или использовать следующих:
 <ul> 
     <h4>User 1 (Admin):</h4>
-    <li>Username: Vladislav</li>
+    <li>Username (login): Vladislav</li>
     <li>Password: Momoru00</li>
 </ul>
 <ul> 
     <h4>User 2:</h4>
-    <li>Username: Nadin</li>
+    <li>Username (login): Nadin</li>
     <li>Password: Momoru00</li>
 </ul>
 
