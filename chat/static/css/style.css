@@ -83,6 +83,18 @@ header {
         font-size: 32px;
     }
 }
+/* iPhone Pixel 5 adaptive */
+@media (max-width: 393px) {
+    .title {
+        font-size: 28px;
+    }
+}
+/* iPhone 12 Pro adaptive */
+@media (max-width: 390px) {
+    .title {
+        font-size: 28px;
+    }
+}
 /* iPhone SE adaptive */
 @media (max-width: 375px) {
     .title {
@@ -101,7 +113,9 @@ header {
     height: 970px;
     padding: 0px;
     margin: 0px;
-    background-image: url('https://crew.bet/wp-content/uploads/2017/02/bet-blocks-bg-purple.png?id=2014');
+    background-image: url('/static/images/background.svg');
+    background-repeat:no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
