@@ -1,4 +1,4 @@
-## Chat application using Django and native Javascript 
+## Chat application written on Django and native Javascript 
 
 ### Описание веб-приложения: 
 <p>Веб-приложение представляет из себя чат, где пользователи регестрируются и им дается доступ 
